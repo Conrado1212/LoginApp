@@ -133,9 +133,25 @@ body {
     border-left: 0;
     border-top:0;
     border-right: 0;
-    border-bottom: 1px solid #999;
+    border: 2px solid #999;
     outline: none;
     background: transparent;
+    transition: all 0.2s linear;
+    border-radius: 6px;
+}
+.input-field :is(input, i){
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    color: #999;
+    transition: all 0.2s ease;
+}
+input:is(:focus, :valid) {
+    border-color: #666666;
+    color: black;
+    font-size: 12px;
+    font-weight: 600;
+    top: 0;
 }
 .submit-btn{
     width:85%;
